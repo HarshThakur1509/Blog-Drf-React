@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --prim: #1F283B;
+    --sec: #0F162B;
+    --high: white
+}
+
+
+body {
+    color: var(--high);
+    background-color: var(--prim);
+}
+
+input {
+    color: black;
+}
+
+.btn1 {
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--high);
+
+}
+
+.btn1:hover {
+    background-color: var(--sec);
+}
+
+.btn2 {
+    position: relative;
+    cursor: pointer;
+}
+
+.btn2::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: width 200ms;
+}
+
+.btn2:hover::after {
+    width: 100%;
+}
+
+.btn3 {
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--high);
+    border: 2px solid var(--high);
+
+}
+
+.btn3:hover {
+    background-color: var(--sec);
+}
+
+.error {
+    color: white;
+    position: relative;
+}
+
+.ModalForm {
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: var(--prim);
+    border-radius: 10px;
+    padding: 5rem;
+    box-shadow: 7px 7px 7px var(--sec);
+
+}
+
+
+.ModalForm::backdrop {
+    background-color: hsla(248, 4%, 64%, 0.25);
+    backdrop-filter: blur(1px);
+}
+
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.HomeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.HomeContentList {
+    background-color: var(--sec);
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px var(--sec);
+}
+
+.Post {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.Post textarea {
+    color: black;
+}
+
+.Todo {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoItems {
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todoItem {
+    background-color: var(--sec);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px var(--sec);
+}
